@@ -1,6 +1,5 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Flutter Run -&gt; 'bestwaytoproceedfront'" type="FlutterRunConfigurationType" factoryName="Flutter">
-    <option name="additionalArgs" value="-v" />
     <option name="filePath" value="$PROJECT_DIR$/packages/bestWaytoproceedfront/lib/main.dart" />
     <method v="2" />
   </configuration>
