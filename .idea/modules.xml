@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/packages/bestwaytoproceedcore/melos_bestwaytoproceed.iml" filepath="$PROJECT_DIR$/packages/bestwaytoproceedcore/melos_bestwaytoproceed.iml" />
       <module fileurl="file://$PROJECT_DIR$/packages/bestwaytoproceedanalyze/melos_bestwaytoproceedanalyze.iml" filepath="$PROJECT_DIR$/packages/bestwaytoproceedanalyze/melos_bestwaytoproceedanalyze.iml" />
-      <module fileurl="file://$PROJECT_DIR$/packages/bestwaytoproceedfront/melos_bestwaytoproceedfront.iml" filepath="$PROJECT_DIR$/packages/bestwaytoproceedfront/melos_bestwaytoproceedfront.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/bestWaytoproceedfront/melos_bestwaytoproceedfront.iml" filepath="$PROJECT_DIR$/packages/bestWaytoproceedfront/melos_bestwaytoproceedfront.iml" />
       <module fileurl="file://$PROJECT_DIR$/melos_bestwaytoproceed.iml" filepath="$PROJECT_DIR$/melos_bestwaytoproceed.iml" />
     </modules>
   </component>
