@@ -16,6 +16,7 @@ scripts:
     echo "APP_ID=1:224943458926:ios:1cae748a9238287ef2747f" >> .env
     echo "GEMINI_API_KEY=AIzaSyA2sQyyq3cYUqakisqqzkrTENm7GWu8w7g" >> .env
     echo "SENTRY_DNS=https://4de90847a02b4296bf87ec02f1bf2513@o4505228691832832.ingest.us.sentry.io/4505228692750336" >> .env
+    melos exec -c 1 -- flutter run --target lib/main.dart
   clone-packages: |
     git clone https://github.com/riadhrahma/bestwaytoproceedfront.git packages/bestwaytoproceedfront
     git clone https://github.com/riadhrahma/bestwaytoproceedcore.git packages/bestwaytoproceedcore
@@ -30,5 +31,6 @@ scripts:
     echo "GEMINI_API_KEY=AIzaSyA2sQyyq3cYUqakisqqzkrTENm7GWu8w7g" >> .env
     echo "SENTRY_DNS=https://4de90847a02b4296bf87ec02f1bf2513@o4505228691832832.ingest.us.sentry.io/4505228692750336" >> .env
   run: |
-    cd packages/bestwaytoproceedfront && flutter run --target=lib/main.dart -d android
+    cd packages/bestwaytoproceedfront
+    melos exec -c 1 -- flutter run --target lib/main.dart
   
