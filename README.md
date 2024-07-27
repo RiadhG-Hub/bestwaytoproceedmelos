@@ -53,9 +53,7 @@ GEMINI_API_KEY=AIzaSyA2sQyyq3cYUqakisqqzkrTENm7GWu8w7g
 SENTRY_DNS=https://4de90847a02b4296bf87ec02f1bf2513@o4505228691832832.ingest.us.sentry.io/4505228692750336
 ```
 
-#### Additional information
 
-For more information, please visit our [documentation](https://github.com/riadhrahma/bestWaytoproceedfront/doc).
 
 ##### Contributing
 
