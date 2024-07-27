@@ -1,9 +1,21 @@
-name: my_project
+# melos.yaml
 
+name: bestwaytoproceed
 packages:
-  - apps/**
   - packages/**
 
 scripts:
-  analyze:
-    exec: dart analyze .
+  clone-packages: |
+    git clone https://github.com/yourusername/bestwaytoproceedfront.git packages/bestwaytoproceedfront
+    git clone https://github.com/yourusername/bestwaytoproceedcore.git packages/bestwaytoproceedcore
+    git clone https://github.com/yourusername/bestwaytoproceedanalyze.git packages/bestwaytoproceedanalyze
+  get: |
+    melos exec -c 1 -- "flutter pub get"
+  run: |
+    cd packages/bestwaytoproceedfront && flutter run --target=lib/main.dart -d android
+  create-env: |
+    echo "ANDROID_API_KEY=AIzaSyCqX9bgBXnD8khc-SqF64KmwR0cNcwSn68" > .env
+    echo "IOS_API_KEY=AIzaSyBe4x5toAJEWGZ7m3j70zs9FK3g2ODxiCU" >> .env
+    echo "APP_ID=1:224943458926:ios:1cae748a9238287ef2747f" >> .env
+    echo "GEMINI_API_KEY=AIzaSyA2sQyyq3cYUqakisqqzkrTENm7GWu8w7g" >> .env
+    echo "SENTRY_DNS=https://4de90847a02b4296bf87ec02f1bf2513@o4505228691832832.ingest.us.sentry.io/4505228692750336" >> .env

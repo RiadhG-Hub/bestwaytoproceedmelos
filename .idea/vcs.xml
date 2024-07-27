@@ -2,8 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/bestWaytoproceedfront" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/bestwaytoproceedanalyze" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/bestwaytoproceedcore" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/bestwaytoproceedfront" vcs="Git" />
   </component>
 </project>
