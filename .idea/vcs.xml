@@ -4,6 +4,5 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/bestWaytoproceedfront" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/bestwaytoproceedanalyze" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/bestwaytoproceedcore" vcs="Git" />
   </component>
 </project>

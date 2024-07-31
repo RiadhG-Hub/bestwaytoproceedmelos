@@ -1,4 +1,4 @@
-Here's the updated README file with the additional section for adding the `.env` file:
+Here's the updated `README.md` file with the Melos section emphasized as an important part for pulling packages and running the application:
 
 ---
 
@@ -52,8 +52,6 @@ GEMINI_API_KEY=AIzaSyA2sQyyq3cYUqakisqqzkrTENm7GWu8w7g
 # Sentry DNS
 SENTRY_DNS=https://4de90847a02b4296bf87ec02f1bf2513@o4505228691832832.ingest.us.sentry.io/4505228692750336
 ```
-
-
 
 ##### Contributing
 
@@ -129,5 +127,57 @@ If you encounter any issues, please file them [here](https://github.com/riadhrah
 For further inquiries or support, reach out to [gharbiriadh16@gmail.com](mailto:gharbiriadh16@gmail.com).
 
 ---
+
+## Melos: Essential for Managing Packages and Running the Application
+
+This project uses [Melos](https://melos.invertase.dev/) for efficient package management and running scripts. Melos simplifies managing multiple packages within the `bestwaytoproceed` project and ensures a streamlined setup process.
+
+### Melos Configuration (`melos.yaml`)
+
+```yaml
+name: bestwaytoproceed
+packages:
+  - packages/**
+
+scripts:
+  setting-up-project: |
+    git clone https://github.com/riadhrahma/bestwaytoproceedfront.git packages/bestwaytoproceedfront
+    git clone https://github.com/riadhrahma/bestwaytoproceedcore.git packages/bestwaytoproceedcore
+    git clone https://github.com/riadhrahma/bestwaytoproceedanalyze.git packages/bestwaytoproceedanalyze
+    melos exec -c 1 -- "flutter pub get"
+    cd packages/bestWaytoproceedfront
+    echo "ANDROID_API_KEY=AIzaSyCqX9bgBXnD8khc-SqF64KmwR0cNcwSn68" > .env
+    echo "IOS_API_KEY=AIzaSyBe4x5toAJEWGZ7m3j70zs9FK3g2ODxiCU" >> .env
+    echo "APP_ID=1:224943458926:ios:1cae748a9238287ef2747f" >> .env
+    echo "GEMINI_API_KEY=AIzaSyA2sQyyq3cYUqakisqqzkrTENm7GWu8w7g" >> .env
+    echo "SENTRY_DNS=https://4de90847a02b4296bf87ec02f1bf2513@o4505228691832832.ingest.us.sentry.io/4505228692750336" >> .env
+    flutter run --target lib/main.dart
+  clone-packages: |
+    git clone https://github.com/riadhrahma/bestwaytoproceedfront.git packages/bestwaytoproceedfront
+    git clone https://github.com/riadhrahma/bestwaytoproceedcore.git packages/bestwaytoproceedcore
+    git clone https://github.com/riadhrahma/bestwaytoproceedanalyze.git packages/bestwaytoproceedanalyze
+  get: |
+    melos exec -c 1 -- "flutter pub get"
+  create-env: |
+    cd packages/bestWaytoproceedfront
+    echo "ANDROID_API_KEY=AIzaSyCqX9bgBXnD8khc-SqF64KmwR0cNcwSn68" > .env
+    echo "IOS_API_KEY=AIzaSyBe4x5toAJEWGZ7m3j70zs9FK3g2ODxiCU" >> .env
+    echo "APP_ID=1:224943458926:ios:1cae748a9238287ef2747f" >> .env
+    echo "GEMINI_API_KEY=AIzaSyA2sQyyq3cYUqakisqqzkrTENm7GWu8w7g" >> .env
+    echo "SENTRY_DNS=https://4de90847a02b4296bf87ec02f1bf2513@o4505228691832832.ingest.us.sentry.io/4505228692750336" >> .env
+  run: |
+    cd packages/bestwaytoproceedfront
+    flutter run --target lib/main.dart -d ios
+```
+
+### Key Scripts
+
+- **setting-up-project**: Clones all necessary packages, installs dependencies, sets up the `.env` file, and runs the Flutter application.
+- **clone-packages**: Clones all the required repositories into the `packages` directory.
+- **get**: Runs `flutter pub get` for all packages to fetch dependencies.
+- **create-env**: Creates the `.env` file with necessary keys and values.
+- **run**: Runs the Flutter application targeting the main entry point for iOS.
+
+Melos automates the setup and execution process, making it easier for developers to get started and maintain the project. It ensures that all packages are properly configured and up-to-date, allowing you to focus on developing and enhancing the application's features.
 
 Happy coding!
