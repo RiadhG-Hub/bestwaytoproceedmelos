@@ -1,6 +1,3 @@
-Here's the updated `README.md` file with the Melos section emphasized as an important part for pulling packages and running the application:
-
----
 
 # BestWayToProceed
 
