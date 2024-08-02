@@ -31,6 +31,6 @@ scripts:
     echo "GEMINI_API_KEY=AIzaSyA2sQyyq3cYUqakisqqzkrTENm7GWu8w7g" >> .env
     echo "SENTRY_DNS=https://4de90847a02b4296bf87ec02f1bf2513@o4505228691832832.ingest.us.sentry.io/4505228692750336" >> .env
   run: |
-    cd packages/bestwaytoproceedfront
-    flutter run --target lib/main.dart -d ios
+    cd packages/bestwaytoproceedfront  
+    flutter run --target lib/main.dart 
   
